@@ -118,10 +118,21 @@ export default function Hero() {
           </p>
         </div>
 
+        {/* Pump.fun Badge */}
+        <div className="mb-6 md:mb-8">
+          <div className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-green-500/20 to-emerald-500/20 border-2 border-green-400/50 rounded-full backdrop-blur-sm animate-pulse-slow">
+            <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
+            <span className="text-xs md:text-sm pixel-text text-green-400">
+              LISTING ON PUMP.FUN
+            </span>
+            <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
+          </div>
+        </div>
+
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center px-4">
-          <button className="w-full sm:w-auto px-6 md:px-8 py-3 md:py-4 bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 rounded-lg pixel-text text-xs md:text-sm text-white shadow-2xl hover:shadow-blue-500/50 transition-all border-2 border-blue-400 hover:scale-105">
-            BUY NOW
+          <button className="w-full sm:w-auto px-6 md:px-8 py-3 md:py-4 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 rounded-lg pixel-text text-xs md:text-sm text-white shadow-2xl hover:shadow-green-500/50 transition-all border-2 border-green-400 hover:scale-105">
+            BUY ON PUMP.FUN
           </button>
           <button className="w-full sm:w-auto px-6 md:px-8 py-3 md:py-4 bg-transparent hover:bg-blue-900/30 rounded-lg pixel-text text-xs md:text-sm text-blue-400 border-2 border-blue-400 hover:border-blue-300 transition-all hover:scale-105">
             LEARN MORE

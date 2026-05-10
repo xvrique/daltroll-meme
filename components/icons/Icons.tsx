@@ -137,3 +137,11 @@ export const NoTaxIcon = ({ className = "w-8 h-8" }: { className?: string }) => 
     <path d="M6 6L18 18" stroke="white" strokeWidth="3" strokeLinecap="round"/>
   </svg>
 );
+
+export const PumpFunIcon = ({ className = "w-8 h-8" }: { className?: string }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M12 2L4 8V16L12 22L20 16V8L12 2Z" fill="currentColor"/>
+    <path d="M12 8L8 10.5V15L12 17.5L16 15V10.5L12 8Z" fill="white" opacity="0.8"/>
+    <circle cx="12" cy="12.5" r="2" fill="currentColor"/>
+  </svg>
+);

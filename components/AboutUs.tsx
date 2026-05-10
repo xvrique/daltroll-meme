@@ -87,7 +87,7 @@ export default function AboutUs() {
         </div>
 
         {/* Stats Section */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
           <div className="bg-[#1e3a5f]/30 backdrop-blur-sm border-2 border-blue-500/30 rounded-xl p-6 text-center hover:border-blue-400 transition-colors">
             <div className="text-3xl md:text-4xl pixel-text text-blue-400 mb-2">100%</div>
             <p className="text-xs text-gray-400">COMMUNITY OWNED</p>
@@ -103,6 +103,29 @@ export default function AboutUs() {
           <div className="bg-[#1e3a5f]/30 backdrop-blur-sm border-2 border-blue-500/30 rounded-xl p-6 text-center hover:border-blue-400 transition-colors">
             <div className="text-3xl md:text-4xl pixel-text text-blue-400 mb-2">∞</div>
             <p className="text-xs text-gray-400">MEMES</p>
+          </div>
+        </div>
+
+        {/* Pump.fun Highlight Section */}
+        <div className="bg-gradient-to-r from-green-600/20 via-emerald-600/20 to-green-600/20 backdrop-blur-sm border-2 border-green-400/50 rounded-2xl p-8 text-center">
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <div className="w-4 h-4 bg-green-400 rounded-full animate-pulse"></div>
+            <h3 className="text-2xl md:text-3xl pixel-text text-green-400">
+              NOW LIVE ON PUMP.FUN
+            </h3>
+            <div className="w-4 h-4 bg-green-400 rounded-full animate-pulse"></div>
+          </div>
+          <p className="text-sm text-gray-300 mb-6 max-w-2xl mx-auto">
+            DALTROLL is officially listed on Pump.fun, the leading Solana meme coin launchpad! 
+            Join the revolution and be part of the most chaotic meme coin on Solana! 🚀
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <button className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 rounded-lg pixel-text text-sm text-white shadow-2xl hover:shadow-green-500/50 transition-all border-2 border-green-400 hover:scale-105">
+              TRADE ON PUMP.FUN
+            </button>
+            <button className="px-8 py-4 bg-transparent hover:bg-green-900/30 rounded-lg pixel-text text-sm text-green-400 border-2 border-green-400 hover:border-green-300 transition-all hover:scale-105">
+              VIEW CHART
+            </button>
           </div>
         </div>
       </div>

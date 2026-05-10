@@ -114,7 +114,7 @@ export default function Navbar() {
               {/* Buy Now Button */}
               <button className="relative group px-4 md:px-8 py-2 md:py-3 overflow-hidden rounded-lg md:rounded-xl pixel-text text-xs md:text-sm text-white transition-all duration-300 hover:scale-105">
                 {/* Animated gradient background */}
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-blue-600 to-purple-600 transition-all duration-300 group-hover:from-blue-600 group-hover:via-purple-600 group-hover:to-pink-600"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-green-500 via-emerald-600 to-green-600 transition-all duration-300 group-hover:from-green-600 group-hover:via-emerald-700 group-hover:to-green-700"></div>
                 
                 {/* Shine effect */}
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -122,18 +122,18 @@ export default function Navbar() {
                 </div>
                 
                 {/* Border glow */}
-                <div className="absolute inset-0 rounded-lg md:rounded-xl border-2 border-blue-400 group-hover:border-blue-300 transition-colors"></div>
+                <div className="absolute inset-0 rounded-lg md:rounded-xl border-2 border-green-400 group-hover:border-green-300 transition-colors"></div>
                 
                 {/* Button text */}
                 <span className="relative flex items-center gap-2">
-                  BUY NOW
+                  BUY ON PUMP.FUN
                   <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                   </svg>
                 </span>
                 
                 {/* Glow effect */}
-                <div className="absolute inset-0 rounded-lg md:rounded-xl shadow-lg group-hover:shadow-blue-500/50 transition-shadow duration-300 -z-10"></div>
+                <div className="absolute inset-0 rounded-lg md:rounded-xl shadow-lg group-hover:shadow-green-500/50 transition-shadow duration-300 -z-10"></div>
               </button>
             </div>
           </div>
