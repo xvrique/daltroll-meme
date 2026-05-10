@@ -1,36 +1,76 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# DALTROLL Landing Page
+
+Landing page profesional untuk DALTROLL - The first Dalang Pelo x Troll meme collab on Solana.
+
+## Features
+
+- ⚡ Next.js 15 dengan App Router
+- 🎨 Tailwind CSS untuk styling
+- 🔤 Google Fonts (Press Start 2P) untuk pixel-style typography
+- 🎭 Animasi smooth dan efek visual menarik
+- 📱 Fully responsive design
+- 🌙 Dark theme dengan gradient background
+- ✨ Glow effects dan animasi floating
 
 ## Getting Started
 
-First, run the development server:
+### Install Dependencies
+
+```bash
+npm install
+```
+
+### Run Development Server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Buka [http://localhost:3000](http://localhost:3000) di browser Anda.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Build for Production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+stonks-landing/
+├── app/
+│   ├── layout.tsx       # Root layout dengan font configuration
+│   ├── page.tsx         # Home page
+│   └── globals.css      # Global styles dan custom utilities
+├── components/
+│   ├── Navbar.tsx       # Navigation bar component
+│   └── Hero.tsx         # Hero section component
+└── public/              # Static assets
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Customization
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Colors
+Edit warna di `tailwind.config.ts` dan `app/globals.css`
 
-## Deploy on Vercel
+### Content
+Edit konten di:
+- `components/Hero.tsx` - Hero section text dan features
+- `components/Navbar.tsx` - Navigation links
+- `app/layout.tsx` - Metadata (title, description)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Fonts
+Font pixel-style menggunakan Press Start 2P dari Google Fonts. Bisa diganti di `app/layout.tsx`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Technologies Used
+
+- Next.js 15
+- React 19
+- TypeScript
+- Tailwind CSS
+- Google Fonts
+
+## License
+
+MIT
