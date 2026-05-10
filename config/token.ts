@@ -21,7 +21,7 @@ export const TOKEN_CONFIG = {
   
   // Social links
   twitter: "https://twitter.com/daltroll",
-  telegram: "https://t.me/daltroll",
+  telegram: "https://t.me/DALTROLL",
   
   // Contract verification
   verified: true,
