@@ -1,4 +1,4 @@
-# 🎭 DALTROLL Landing Page
+# DALTROLL Meme Coin Landing Page
 
 > The first Dalang Pelo x Troll meme collab on Solana, bringing chaos, culture, and community to the moon! 🚀
 
@@ -7,19 +7,19 @@
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind-4.0-38bdf8?style=for-the-badge&logo=tailwind-css)
 ![Solana](https://img.shields.io/badge/Solana-Blockchain-9945FF?style=for-the-badge&logo=solana)
 
-## ✨ Features
+## Features
 
-- ⚡ **Next.js 16** with App Router & Turbopack
-- 🎨 **Tailwind CSS 4** for modern styling
-- 🔤 **Custom Pixel Font** (Press Start 2P)
-- 🎭 **Vector Icons** - Custom SVG icons (no emoji dependencies)
-- 📱 **Fully Responsive** - Mobile-first design
-- 🌙 **Animated Background** - GIF background with decorative elements
-- ✨ **Smooth Animations** - Float, pulse, shine effects
-- 🎯 **Active Section Detection** - Smart navbar highlighting
-- 🚀 **Performance Optimized** - Static generation, image optimization
+- **Next.js 16** with App Router & Turbopack
+- **Tailwind CSS 4** for modern styling
+- **Custom Pixel Font** (Press Start 2P)
+- **Vector Icons** - Custom SVG icons (no emoji dependencies)
+- **Fully Responsive** - Mobile-first design
+- **Animated Background** - GIF background with decorative elements
+- **Smooth Animations** - Float, pulse, shine effects
+- **Active Section Detection** - Smart navbar highlighting
+- **Performance Optimized** - Static generation, image optimization
 
-## 🎯 Sections
+## Sections
 
 1. **Hero** - Main landing with logo and CTA buttons
 2. **About Us** - Project story and mission
@@ -27,7 +27,7 @@
 4. **Tokenomics** - Token distribution and features
 5. **Footer** - Links and information
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 
@@ -50,7 +50,7 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## 📦 Build & Deploy
+## Build & Deploy
 
 ### Build for Production
 
@@ -106,7 +106,7 @@ Place your assets in `public/assets/`:
 
 See [SETUP-ASSETS.md](SETUP-ASSETS.md) for asset requirements.
 
-## 🎭 Vector Icons
+## Vector Icons
 
 Custom SVG icons located in `components/icons/Icons.tsx`:
 - RocketIcon, CommunityIcon, TheaterIcon
@@ -115,14 +115,14 @@ Custom SVG icons located in `components/icons/Icons.tsx`:
 
 See [VECTOR-ICONS-UPDATE.md](VECTOR-ICONS-UPDATE.md) for icon documentation.
 
-## 📱 Mobile Responsive
+## Mobile Responsive
 
 Optimized breakpoints:
 - **Mobile**: < 768px
 - **Tablet**: 768px - 1024px
 - **Desktop**: > 1024px
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Framework**: Next.js 16.2 (App Router)
 - **Language**: TypeScript 5.0
@@ -131,7 +131,7 @@ Optimized breakpoints:
 - **Icons**: Custom SVG components
 - **Deployment**: Vercel-ready
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 stonks-landing/
@@ -153,15 +153,15 @@ stonks-landing/
 └── README.md
 ```
 
-## 🎯 Performance
+## Performance
 
-- ✅ Static Site Generation (SSG)
-- ✅ Image Optimization (Next.js Image)
-- ✅ Font Optimization (Google Fonts)
-- ✅ CSS Optimization (Tailwind CSS)
-- ✅ Code Splitting (Automatic)
+- Static Site Generation (SSG)
+- Image Optimization (Next.js Image)
+- Font Optimization (Google Fonts)
+- CSS Optimization (Tailwind CSS)
+- Code Splitting (Automatic)
 
-## 📝 Environment Variables
+## Environment Variables
 
 Create `.env.local` (optional):
 
@@ -171,15 +171,15 @@ NEXT_PUBLIC_TELEGRAM_URL=https://t.me/daltroll
 NEXT_PUBLIC_CONTRACT_ADDRESS=your_solana_contract_address
 ```
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
-## 📄 License
+## License
 
 MIT License - feel free to use this project for your own purposes.
 
-## 🔗 Links
+## Links
 
 - **GitHub**: [xvrique/daltroll-meme](https://github.com/xvrique/daltroll-meme)
 - **Live Demo**: Coming soon...
@@ -191,6 +191,6 @@ MIT License - feel free to use this project for your own purposes.
 
 ---
 
-Made with 💙 by the DALTROLL community
+Made by the DALTROLL community
 
 **Disclaimer**: DALTROLL is a meme coin created for entertainment purposes. Always DYOR (Do Your Own Research) and invest responsibly. Cryptocurrency investments carry risk.
