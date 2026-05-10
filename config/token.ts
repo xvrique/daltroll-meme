@@ -3,7 +3,7 @@
 
 export const TOKEN_CONFIG = {
   // Replace with your actual Solana token address
-  address: "B232KYJRFZiUaCvBm2oznDiBCrEHoHwxKADdm8Arpump",
+  address: "EkN8NVD3XuPYtPgM4JtP19fjKdDENVgbu1KRPBZNpump",
   
   // Token details
   name: "DALTROLL",
