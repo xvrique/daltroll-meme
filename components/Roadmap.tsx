@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { TheaterIcon, FireIcon, StarIcon, RocketIcon, CheckIcon, BoltIcon, ClockIcon } from './icons/Icons';
 
 export default function Roadmap() {
@@ -98,7 +99,22 @@ export default function Roadmap() {
 
   return (
     <section id="roadmap" className="relative py-12 md:py-24 px-4 md:px-6">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto relative">
+        {/* Decorative Images - Positioned inside container to prevent clipping */}
+        <div className="absolute top-10 -right-8 md:-right-16 w-14 h-14 md:w-24 md:h-24 opacity-30 md:opacity-40 animate-pulse-slow pointer-events-none">
+          <Image src="/assets/pumpit.png" alt="pump it" width={96} height={96} className="object-contain" />
+        </div>
+        <div className="absolute top-1/3 -left-6 md:-left-12 w-16 h-16 md:w-28 md:h-28 opacity-25 md:opacity-35 animate-float pointer-events-none">
+          <Image src="/assets/lol.png" alt="lol" width={112} height={112} className="object-contain" />
+        </div>
+        <div className="absolute bottom-32 -right-6 md:-right-12 w-12 h-12 md:w-20 md:h-20 opacity-30 md:opacity-40 animate-float pointer-events-none" style={{ animationDelay: '1.5s' }}>
+          <Image src="/assets/fungus.png" alt="fungus" width={80} height={80} className="object-contain" />
+        </div>
+        <div className="absolute bottom-10 -left-8 md:-left-16 w-14 h-14 md:w-24 md:h-24 opacity-25 md:opacity-35 animate-pulse-slow pointer-events-none" style={{ animationDelay: '1s' }}>
+          <Image src="/assets/pmup.png" alt="pmup" width={96} height={96} className="object-contain" />
+        </div>
+
+        <div className="relative z-10">
         {/* Section Header */}
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-3xl md:text-5xl lg:text-6xl pixel-text glow-blue text-blue-400 mb-4">
@@ -131,22 +147,24 @@ export default function Roadmap() {
                 <div
                   className={`bg-[#1e3a5f]/30 backdrop-blur-sm border-2 ${getStatusColor(
                     phase.status
-                  )} rounded-2xl p-8 hover:scale-105 transition-all ${
+                  )} rounded-2xl p-6 md:p-8 hover:scale-105 transition-all ${
                     index % 2 === 0 ? 'md:mr-12' : 'md:ml-12'
                   }`}
                 >
                   {/* Header */}
-                  <div className="flex items-center justify-between mb-4">
+                  <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3 md:gap-0 mb-4">
                     <div className="flex items-center gap-3">
-                      <phase.Icon className="w-10 h-10 text-blue-400" />
+                      <phase.Icon className="w-8 h-8 md:w-10 md:h-10 text-blue-400 flex-shrink-0" />
                       <div>
                         <p className="text-xs text-gray-400">{phase.phase}</p>
-                        <h3 className="text-xl md:text-2xl pixel-text text-blue-400">
+                        <h3 className="text-lg md:text-2xl pixel-text text-blue-400">
                           {phase.title}
                         </h3>
                       </div>
                     </div>
-                    {getStatusBadge(phase.status)}
+                    <div className="ml-11 md:ml-0">
+                      {getStatusBadge(phase.status)}
+                    </div>
                   </div>
 
                   {/* Items */}
@@ -180,6 +198,7 @@ export default function Roadmap() {
               JOIN COMMUNITY
             </button>
           </div>
+        </div>
         </div>
       </div>
     </section>

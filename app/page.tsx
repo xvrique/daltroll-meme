@@ -4,10 +4,11 @@ import Footer from '@/components/Footer';
 import AboutUs from '@/components/AboutUs';
 import Roadmap from '@/components/Roadmap';
 import Tokenomics from '@/components/Tokenomics';
+import TokenAddress from '@/components/TokenAddress';
 
 export default function Home() {
   return (
-    <main className="min-h-screen relative">
+    <main className="min-h-screen relative overflow-x-hidden">
       {/* Background GIF */}
       <div 
         className="fixed inset-0 z-0 bg-cover bg-center bg-no-repeat"
@@ -18,9 +19,10 @@ export default function Home() {
       </div>
       
       {/* Content */}
-      <div className="relative z-10">
+      <div className="relative z-10 overflow-x-hidden">
         <Navbar />
         <Hero />
+        <TokenAddress />
         <AboutUs />
         <Roadmap />
         <Tokenomics />

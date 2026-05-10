@@ -6,7 +6,8 @@ import Image from 'next/image';
 export default function Footer() {
   return (
     <footer className="relative bg-[#0a1628] border-t-2 border-[#1e3a5f] py-12">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-6 relative">
+        <div className="relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           {/* Brand */}
           <div className="col-span-1 md:col-span-2">
@@ -80,6 +81,7 @@ export default function Footer() {
               </Link>
             </div>
           </div>
+        </div>
         </div>
       </div>
     </footer>

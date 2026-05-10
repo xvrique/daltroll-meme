@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { WaterDropIcon, GiftIcon, MegaphoneIcon, GearIcon, NoTaxIcon, DiamondIcon, FireIcon, CheckIcon, ShieldIcon, LockIcon, UsersIcon } from './icons/Icons';
 
 export default function Tokenomics() {
@@ -67,7 +68,22 @@ export default function Tokenomics() {
 
   return (
     <section id="tokenomics" className="relative py-12 md:py-24 px-4 md:px-6">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto relative">
+        {/* Decorative Images - Positioned inside container to prevent clipping */}
+        <div className="absolute top-10 -left-8 md:-left-16 w-16 h-16 md:w-28 md:h-28 opacity-30 md:opacity-40 animate-float pointer-events-none">
+          <Image src="/assets/coin.png" alt="coin" width={112} height={112} className="object-contain" />
+        </div>
+        <div className="absolute top-1/2 -right-6 md:-right-12 w-14 h-14 md:w-24 md:h-24 opacity-25 md:opacity-35 animate-pulse-slow pointer-events-none">
+          <Image src="/assets/rocket.png" alt="rocket" width={96} height={96} className="object-contain" />
+        </div>
+        <div className="absolute bottom-20 -left-6 md:-left-12 w-12 h-12 md:w-20 md:h-20 opacity-30 md:opacity-40 animate-float pointer-events-none" style={{ animationDelay: '1s' }}>
+          <Image src="/assets/tothemoon.png" alt="to the moon" width={80} height={80} className="object-contain" />
+        </div>
+        <div className="absolute bottom-40 -right-8 md:-right-16 w-16 h-16 md:w-28 md:h-28 opacity-25 md:opacity-35 animate-pulse-slow pointer-events-none" style={{ animationDelay: '0.5s' }}>
+          <Image src="/assets/wagmi.png" alt="wagmi" width={112} height={112} className="object-contain" />
+        </div>
+
+        <div className="relative z-10">
         {/* Section Header */}
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-3xl md:text-5xl lg:text-6xl pixel-text glow-blue text-blue-400 mb-4">
@@ -80,17 +96,17 @@ export default function Tokenomics() {
         </div>
 
         {/* Key Features Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-16">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6 mb-16">
           {features.map((feature, index) => (
             <div
               key={index}
-              className="bg-[#1e3a5f]/30 backdrop-blur-sm border-2 border-blue-500/30 rounded-xl p-6 text-center hover:border-blue-400 hover:scale-105 transition-all"
+              className="bg-[#1e3a5f]/30 backdrop-blur-sm border-2 border-blue-500/30 rounded-xl p-4 md:p-6 text-center hover:border-blue-400 hover:scale-105 transition-all"
             >
-              <div className="flex justify-center mb-3">
-                <feature.Icon className="w-12 h-12 text-blue-400" />
+              <div className="flex justify-center mb-2 md:mb-3">
+                <feature.Icon className="w-8 h-8 md:w-12 md:h-12 text-blue-400" />
               </div>
-              <h3 className="text-xs pixel-text text-gray-400 mb-2">{feature.title}</h3>
-              <div className="text-xl md:text-2xl pixel-text text-blue-400 mb-2">
+              <h3 className="text-xs pixel-text text-gray-400 mb-1 md:mb-2">{feature.title}</h3>
+              <div className="text-lg md:text-2xl pixel-text text-blue-400 mb-1 md:mb-2 break-words">
                 {feature.value}
               </div>
               <p className="text-xs text-gray-500">{feature.description}</p>
@@ -131,7 +147,7 @@ export default function Tokenomics() {
               {/* Total Supply */}
               <div className="mt-8 pt-8 border-t-2 border-blue-500/30 text-center">
                 <p className="text-xs text-gray-400 mb-2">TOTAL SUPPLY</p>
-                <p className="text-4xl pixel-text text-blue-400 glow-blue">
+                <p className="text-2xl md:text-4xl pixel-text text-blue-400 glow-blue break-words px-2">
                   1,000,000,000
                 </p>
                 <p className="text-xs text-gray-500 mt-2">DALTROLL TOKENS</p>
@@ -202,6 +218,7 @@ export default function Tokenomics() {
             * DALTROLL is a meme coin created for entertainment purposes. Always DYOR (Do Your Own Research) and invest responsibly. 
             Cryptocurrency investments carry risk. Never invest more than you can afford to lose.
           </p>
+        </div>
         </div>
       </div>
     </section>

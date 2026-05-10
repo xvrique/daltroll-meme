@@ -3,10 +3,12 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
+import TOKEN_CONFIG from '@/config/token';
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('');
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -35,29 +37,33 @@ export default function Navbar() {
     { href: '#tokenomics', label: 'TOKENOMICS' },
   ];
 
+  const handleNavClick = () => {
+    setIsMobileMenuOpen(false);
+  };
+
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 px-4 md:px-6 py-3 md:py-4 transition-all">
+    <nav className="fixed top-0 left-0 right-0 z-50 px-2 md:px-6 py-2 md:py-4 transition-all">
       <div className="max-w-7xl mx-auto">
-        <div className={`relative backdrop-blur-xl border-2 rounded-2xl md:rounded-3xl px-4 md:px-8 py-3 md:py-4 shadow-2xl transition-all duration-300 ${
+        <div className={`relative backdrop-blur-xl border-2 rounded-xl md:rounded-3xl px-2 md:px-8 py-2 md:py-4 shadow-2xl transition-all duration-300 ${
           isScrolled 
             ? 'bg-[#0a1628]/98 border-blue-500/40 shadow-blue-500/20' 
             : 'bg-[#0a1628]/85 border-[#1e3a5f]/60'
         }`}>
           {/* Glow effect on scroll */}
           {isScrolled && (
-            <div className="absolute inset-0 rounded-2xl md:rounded-3xl bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-pink-500/10 blur-xl -z-10"></div>
+            <div className="absolute inset-0 rounded-xl md:rounded-3xl bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-pink-500/10 blur-xl -z-10"></div>
           )}
           
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between gap-1 md:gap-2">
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-2 md:gap-3 group">
-              <div className="relative w-10 h-10 md:w-12 md:h-12">
+            <Link href="/" className="flex items-center gap-1 md:gap-2 group flex-shrink-0">
+              <div className="relative w-6 h-6 md:w-12 md:h-12">
                 {/* Animated ring */}
                 <div className="absolute inset-0 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 opacity-20 group-hover:opacity-40 transition-opacity animate-pulse-slow"></div>
-                <div className="absolute inset-0 rounded-full border-2 border-blue-400/30 group-hover:border-blue-400/60 transition-colors"></div>
+                <div className="absolute inset-0 rounded-full border border-blue-400/30 group-hover:border-blue-400/60 transition-colors"></div>
                 
                 {/* Logo image */}
-                <div className="relative w-full h-full rounded-full overflow-hidden bg-gradient-to-br from-blue-900/40 to-purple-900/40 backdrop-blur-sm p-1 group-hover:scale-110 transition-transform duration-300">
+                <div className="relative w-full h-full rounded-full overflow-hidden bg-gradient-to-br from-blue-900/40 to-purple-900/40 backdrop-blur-sm p-0.5 md:p-1 group-hover:scale-110 transition-transform duration-300">
                   <Image 
                     src="/assets/logo-main.png" 
                     alt="DALTROLL Logo"
@@ -69,7 +75,7 @@ export default function Navbar() {
                 </div>
               </div>
               
-              <span className="text-lg md:text-2xl pixel-text glow-blue text-blue-400 group-hover:text-blue-300 transition-colors">
+              <span className="text-xs md:text-2xl pixel-text glow-blue text-blue-400 group-hover:text-blue-300 transition-colors">
                 DALTROLL
               </span>
             </Link>
@@ -103,16 +109,24 @@ export default function Navbar() {
             </div>
 
             {/* CTA Button */}
-            <div className="flex items-center gap-3">
-              {/* Mobile menu button - placeholder for future */}
-              <button className="lg:hidden w-10 h-10 flex items-center justify-center text-blue-400 hover:text-blue-300 transition-colors">
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="flex items-center gap-2 flex-shrink-0">
+              {/* Mobile menu button */}
+              <button 
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                className="lg:hidden w-8 h-8 flex items-center justify-center text-blue-400 hover:text-blue-300 transition-colors z-50"
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
               </button>
               
               {/* Buy Now Button */}
-              <button className="relative group px-4 md:px-8 py-2 md:py-3 overflow-hidden rounded-lg md:rounded-xl pixel-text text-xs md:text-sm text-white transition-all duration-300 hover:scale-105">
+              <a 
+                href={TOKEN_CONFIG.pumpFun(TOKEN_CONFIG.address)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="relative group px-3 md:px-8 py-2 md:py-3 overflow-hidden rounded-lg md:rounded-xl pixel-text text-xs md:text-sm text-white transition-all duration-300 hover:scale-105 whitespace-nowrap inline-block"
+              >
                 {/* Animated gradient background */}
                 <div className="absolute inset-0 bg-gradient-to-r from-green-500 via-emerald-600 to-green-600 transition-all duration-300 group-hover:from-green-600 group-hover:via-emerald-700 group-hover:to-green-700"></div>
                 
@@ -125,18 +139,34 @@ export default function Navbar() {
                 <div className="absolute inset-0 rounded-lg md:rounded-xl border-2 border-green-400 group-hover:border-green-300 transition-colors"></div>
                 
                 {/* Button text */}
-                <span className="relative flex items-center gap-2">
-                  BUY ON PUMP.FUN
-                  <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <span className="relative flex items-center gap-1 md:gap-2">
+                  <span className="hidden sm:inline">BUY ON</span> PUMP.FUN
+                  <svg className="w-3 h-3 md:w-4 md:h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                   </svg>
                 </span>
                 
                 {/* Glow effect */}
                 <div className="absolute inset-0 rounded-lg md:rounded-xl shadow-lg group-hover:shadow-green-500/50 transition-shadow duration-300 -z-10"></div>
-              </button>
+              </a>
             </div>
           </div>
+
+          {/* Mobile Menu */}
+          {isMobileMenuOpen && (
+            <div className="lg:hidden mt-4 pt-4 border-t border-blue-500/30 space-y-2">
+              {navLinks.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  onClick={handleNavClick}
+                  className="block px-4 py-2 text-xs pixel-text text-gray-400 hover:text-blue-300 hover:bg-blue-500/10 rounded-lg transition-all"
+                >
+                  {link.label}
+                </a>
+              ))}
+            </div>
+          )}
         </div>
       </div>
     </nav>
