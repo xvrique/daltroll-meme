@@ -7,6 +7,13 @@
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind-4.0-38bdf8?style=for-the-badge&logo=tailwind-css)
 ![Solana](https://img.shields.io/badge/Solana-Blockchain-9945FF?style=for-the-badge&logo=solana)
 
+## Video Preview
+
+<p align="center">
+  <video src="public/assets/daltroll-preview.mp4" width="100%" style="max-height: 480px;" controls autoplay loop muted></video>
+</p>
+
+
 ## Features
 
 - **Next.js 16** with App Router & Turbopack
