@@ -9,9 +9,10 @@
 
 ## Video Preview
 
-<p align="center">
-  <video src="public/assets/daltroll-preview.mp4" width="100%" style="max-height: 480px;" controls autoplay loop muted></video>
-</p>
+[![Watch the Video Preview](public/assets/logo-main.png)](https://github.com/xvrique/daltroll-meme/blob/main/public/assets/daltroll-preview.mp4)
+
+🎥 **[Click here to watch the Video Preview](https://github.com/xvrique/daltroll-meme/blob/main/public/assets/daltroll-preview.mp4)**
+
 
 
 ## Features
