@@ -7,11 +7,9 @@
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind-4.0-38bdf8?style=for-the-badge&logo=tailwind-css)
 ![Solana](https://img.shields.io/badge/Solana-Blockchain-9945FF?style=for-the-badge&logo=solana)
 
-## Video Preview
+## Preview
 
-[![Watch the Video Preview](public/assets/logo-main.png)](https://github.com/xvrique/daltroll-meme/blob/main/public/assets/daltroll-preview.mp4)
-
-🎥 **[Click here to watch the Video Preview](https://github.com/xvrique/daltroll-meme/blob/main/public/assets/daltroll-preview.mp4)**
+![DALTROLL Preview](public/assets/image.png)
 
 
 
